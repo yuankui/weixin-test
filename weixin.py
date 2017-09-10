@@ -4,7 +4,7 @@ from flask import request
 app = Flask(__name__)
 
 
-@app.route("/")
+@app.route("/", methods=['POST', 'GET'])
 def hello():
     echo_str = request.args.get('echostr')
     return echo_str
